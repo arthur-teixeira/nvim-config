@@ -21,6 +21,22 @@ lsp.setup_nvim_cmp({
   mapping = cmp_mappings
 })
 
+lsp.configure('eslint', {
+    on_attach = function(client, _)
+        client.server_capabilities.document_formatting = true
+        if client.server_capabilities.document_formatting then
+            local au_lsp = vim.api.nvim_create_augroup("eslint-lsp", { clear = true }),
+            vim.api.nvim_create_autocmd("BufWritePre", {
+                pattern = "*",
+                callback = function()
+                    vim.lsp.buf.format()
+                end,
+                group = au_lsp
+            })
+        end
+    end
+})
+
 lsp.on_attach(function(client, bufnr)
 	local opt = {buffer = bufnr, remap = false}
 

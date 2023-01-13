@@ -49,7 +49,12 @@ return require('packer').startup(function(use)
     {'L3MON4D3/LuaSnip'},
     -- Snippet Collection (Optional)
     {'rafamadriz/friendly-snippets'},
+  };
+
   }
-}
+
+  use 'windwp/nvim-autopairs'
+
+
 
 end)
