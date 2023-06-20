@@ -79,13 +79,10 @@ _G.packer_plugins = {
     path = "/home/arthur.teixeira/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["barbecue.nvim"] = {
-    config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rbarbecue\frequire\0" },
-    load_after = {},
+  catppuccin = {
     loaded = true,
-    needs_bufread = false,
-    path = "/home/arthur.teixeira/.local/share/nvim/site/pack/packer/opt/barbecue.nvim",
-    url = "https://github.com/utilyre/barbecue.nvim"
+    path = "/home/arthur.teixeira/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
@@ -112,19 +109,18 @@ _G.packer_plugins = {
     path = "/home/arthur.teixeira/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["copilot.lua"] = {
+    loaded = true,
+    path = "/home/arthur.teixeira/.local/share/nvim/site/pack/packer/start/copilot.lua",
+    url = "https://github.com/zbirenbaum/copilot.lua"
+  },
   ["cosmic-ui"] = {
     config = { "\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14cosmic-ui\frequire\0" },
     loaded = true,
     path = "/home/arthur.teixeira/.local/share/nvim/site/pack/packer/start/cosmic-ui",
     url = "https://github.com/CosmicNvim/cosmic-ui"
   },
-  ["dap-install"] = {
-    loaded = true,
-    path = "/home/arthur.teixeira/.local/share/nvim/site/pack/packer/start/dap-install",
-    url = "https://github.com/Pocco81/DAPInstall.nvim"
-  },
   ["dashboard-nvim"] = {
-    config = { "\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14dashboard\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -141,11 +137,6 @@ _G.packer_plugins = {
     path = "/home/arthur.teixeira/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  ["goto-breakpoints.nvim"] = {
-    loaded = true,
-    path = "/home/arthur.teixeira/.local/share/nvim/site/pack/packer/start/goto-breakpoints.nvim",
-    url = "https://github.com/ofirgall/goto-breakpoints.nvim"
-  },
   harpoon = {
     loaded = true,
     path = "/home/arthur.teixeira/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -160,11 +151,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/arthur.teixeira/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
-  },
-  ["marks.nvim"] = {
-    loaded = true,
-    path = "/home/arthur.teixeira/.local/share/nvim/site/pack/packer/start/marks.nvim",
-    url = "https://github.com/chentoast/marks.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -186,31 +172,10 @@ _G.packer_plugins = {
     path = "/home/arthur.teixeira/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
-  ["nvim-dap"] = {
-    loaded = true,
-    path = "/home/arthur.teixeira/.local/share/nvim/site/pack/packer/start/nvim-dap",
-    url = "https://github.com/mfussenegger/nvim-dap"
-  },
-  ["nvim-dap-ui"] = {
-    loaded = true,
-    path = "/home/arthur.teixeira/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
-    url = "https://github.com/rcarriga/nvim-dap-ui"
-  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/arthur.teixeira/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-navic"] = {
-    loaded = true,
-    path = "/home/arthur.teixeira/.local/share/nvim/site/pack/packer/start/nvim-navic",
-    url = "https://github.com/SmiteshP/nvim-navic"
-  },
-  ["nvim-test"] = {
-    config = { "\27LJ\2\n’\4\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\frunners\1\0\v\blua\29nvim-test.runners.busted\truby\28nvim-test.runners.rspec\ago\30nvim-test.runners.go-test\vpython\29nvim-test.runners.pytest\15typescript\27nvim-test.runners.jest\15javascript\28nvim-test.runners.mocha\20javascriptreact\27nvim-test.runners.jest\fhaskell\28nvim-test.runners.hspec\20typescriptreact\27nvim-test.runners.jest\acs\29nvim-test.runners.dotnet\trust!nvim-test.runners.cargo-test\rtermOpts\1\0\6\fgo_back\1\vheight\3\24\14direction\rvertical\nwidth\3`\15stopinsert\tauto\rkeep_one\2\1\0\5\vsilent\1\20commands_create\2\tterm\rterminal\22filename_modifier\a:.\brun\2\nsetup\14nvim-test\frequire\0" },
-    loaded = true,
-    path = "/home/arthur.teixeira/.local/share/nvim/site/pack/packer/start/nvim-test",
-    url = "https://github.com/klen/nvim-test"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -243,11 +208,6 @@ _G.packer_plugins = {
     path = "/home/arthur.teixeira/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
-  ["telescope-dap.nvim"] = {
-    loaded = true,
-    path = "/home/arthur.teixeira/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim",
-    url = "https://github.com/nvim-telescope/telescope-dap.nvim"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/arthur.teixeira/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -276,27 +236,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: cosmic-ui
-time([[Config for cosmic-ui]], true)
-try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14cosmic-ui\frequire\0", "config", "cosmic-ui")
-time([[Config for cosmic-ui]], false)
 -- Config for: rose-pine
 time([[Config for rose-pine]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")
 time([[Config for rose-pine]], false)
--- Config for: nvim-test
-time([[Config for nvim-test]], true)
-try_loadstring("\27LJ\2\n’\4\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\frunners\1\0\v\blua\29nvim-test.runners.busted\truby\28nvim-test.runners.rspec\ago\30nvim-test.runners.go-test\vpython\29nvim-test.runners.pytest\15typescript\27nvim-test.runners.jest\15javascript\28nvim-test.runners.mocha\20javascriptreact\27nvim-test.runners.jest\fhaskell\28nvim-test.runners.hspec\20typescriptreact\27nvim-test.runners.jest\acs\29nvim-test.runners.dotnet\trust!nvim-test.runners.cargo-test\rtermOpts\1\0\6\fgo_back\1\vheight\3\24\14direction\rvertical\nwidth\3`\15stopinsert\tauto\rkeep_one\2\1\0\5\vsilent\1\20commands_create\2\tterm\rterminal\22filename_modifier\a:.\brun\2\nsetup\14nvim-test\frequire\0", "config", "nvim-test")
-time([[Config for nvim-test]], false)
--- Load plugins in order defined by `after`
-time([[Sequenced loading]], true)
-vim.cmd [[ packadd nvim-web-devicons ]]
-vim.cmd [[ packadd barbecue.nvim ]]
-
--- Config for: barbecue.nvim
-try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rbarbecue\frequire\0", "config", "barbecue.nvim")
-
-time([[Sequenced loading]], false)
+-- Config for: cosmic-ui
+time([[Config for cosmic-ui]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14cosmic-ui\frequire\0", "config", "cosmic-ui")
+time([[Config for cosmic-ui]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
