@@ -51,14 +51,6 @@ return require('packer').startup(function(use)
     use 'tpope/vim-surround'
 
     use {
-        'nvim-tree/nvim-tree.lua',
-        requires = {
-            'nvim-tree/nvim-web-devicons', -- optional, for file icons
-        },
-        tag = 'nightly' -- optional, updated every week. (see issue #1193)
-    }
-
-    use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
@@ -76,8 +68,6 @@ return require('packer').startup(function(use)
             require('cosmic-ui').setup()
         end,
     })
-
-    use 'Mofiqul/dracula.nvim'
 
     use { "catppuccin/nvim", as = "catppuccin" }
 
