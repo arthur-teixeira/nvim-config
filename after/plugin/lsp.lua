@@ -22,23 +22,16 @@ lsp.setup_nvim_cmp({
 })
 
 lsp.configure('eslint', {
-    on_attach = function(client, _)
-        client.server_capabilities.document_formatting = true
-        if client.server_capabilities.document_formatting then
-            local au_lsp = vim.api.nvim_create_augroup("eslint-lsp", { clear = true }),
-                vim.api.nvim_create_autocmd("BufWritePre", {
-                    pattern = "*",
-                    callback = function()
-                        vim.cmd.EslintFixAll()
-                        vim.lsp.buf.format()
-                    end,
-                    group = au_lsp
-                })
-        end
+    on_attach = function(_, bufnr)
+        local opt = { buffer = bufnr, remap = false }
+        vim.keymap.set("n", "<leader>f", function()
+            vim.lsp.buf.format()
+            vim.cmd.EslintFixAll()
+        end, opt)
     end
 })
 
-lsp.on_attach(function(client, bufnr)
+lsp.on_attach(function(_, bufnr)
     local opt = { buffer = bufnr, remap = false }
 
     vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opt)
