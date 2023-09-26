@@ -71,5 +71,5 @@ return require('packer').startup(function(use)
 
     use { "catppuccin/nvim", as = "catppuccin" }
 
-    use { "zbirenbaum/copilot.lua" }
+    use "alx741/vim-hindent"
 end)

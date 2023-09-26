@@ -5,7 +5,8 @@ lsp.preset("recommended")
 lsp.ensure_installed({
     'tsserver',
     'eslint',
-    'lua_ls'
+    'lua_ls',
+    'hls',
 })
 
 local cmp = require('cmp')
@@ -27,6 +28,16 @@ lsp.configure('eslint', {
         vim.keymap.set("n", "<leader>f", function()
             vim.lsp.buf.format()
             vim.cmd.EslintFixAll()
+        end, opt)
+    end
+})
+
+lsp.configure('hls', {
+    on_attach = function(_, bufnr)
+        vim.cmd.HindentDisable()
+        local opt = { buffer = bufnr, remap = false }
+        vim.keymap.set("n", "<leader>f", function()
+            vim.cmd.Hindent()
         end, opt)
     end
 })
