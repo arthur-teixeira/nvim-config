@@ -72,4 +72,6 @@ return require('packer').startup(function(use)
     use { "catppuccin/nvim", as = "catppuccin" }
 
     use "alx741/vim-hindent"
+
+    use "numToStr/Comment.nvim"
 end)
