@@ -34,3 +34,17 @@ vim.keymap.set({ "n", "v", "i" }, "<Left>", "<nop>")
 vim.keymap.set({ "n", "v", "i" }, "<Right>", "<nop>")
 vim.keymap.set({ "n", "v", "i" }, "<Down>", "<nop>")
 vim.keymap.set({ "n", "v", "i" }, "<Up>", "<nop>")
+
+vim.keymap.set("n", "<leader>tw2", function()
+  print("Setting tab width to 2")
+  vim.opt.tabstop = 2
+  vim.opt.softtabstop = 2
+  vim.opt.shiftwidth = 2
+end)
+
+vim.keymap.set("n", "<leader>tw4", function()
+  print("Setting tab width to 4")
+  vim.opt.tabstop = 4
+  vim.opt.softtabstop = 4
+  vim.opt.shiftwidth = 4
+end)
