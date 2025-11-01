@@ -1,0 +1,38 @@
+return {
+	"CosmicNvim/cosmic-ui",
+	dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+	init = function()
+		require("cosmic-ui").setup()
+		local opt = { buffer = bufnr, remap = false }
+		vim.keymap.set("n", "gd", function()
+			vim.lsp.buf.definition()
+		end, opt)
+		vim.keymap.set("n", "K", function()
+			vim.lsp.buf.hover()
+		end, opt)
+		vim.keymap.set("n", "<leader>vws", function()
+			vim.lsp.buf.workspace_symbol()
+		end, opt)
+		vim.keymap.set("n", "<leader>vd", function()
+			vim.diagnostic.open_float()
+		end, opt)
+		vim.keymap.set("n", "[d", function()
+			vim.diagnostic.goto_prev()
+		end, opt)
+		vim.keymap.set("n", "]d", function()
+			vim.diagnostic.goto_next()
+		end, opt)
+		vim.keymap.set("n", "<leader>vca", function()
+			require("cosmic-ui").code_actions()
+		end, opt)
+		vim.keymap.set("n", "<leader>vrr", function()
+			vim.lsp.buf.references()
+		end, opt)
+		vim.keymap.set("n", "<leader>vrn", function()
+			require("cosmic-ui").rename()
+		end, opt)
+		vim.keymap.set("n", "<C-h>", function()
+			vim.lsp.buf.signature_help()
+		end, opt)
+	end,
+}
