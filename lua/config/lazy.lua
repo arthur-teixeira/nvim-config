@@ -16,12 +16,12 @@ vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
+vim.g.lazyvim_check_order = false
 
 require("lazy").setup({
 	spec = {
 		{ import = "plugins" },
 	},
-	install = { colorscheme = { "rosepine" } },
 	checker = { enabled = true },
 	change_detection = { notify = false },
 })

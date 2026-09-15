@@ -34,15 +34,45 @@ vim.keymap.set({ "n", "v", "i" }, "<Down>", "<nop>")
 vim.keymap.set({ "n", "v", "i" }, "<Up>", "<nop>")
 
 vim.keymap.set("n", "<leader>tw2", function()
-	print("Setting tab width to 2")
 	vim.opt.tabstop = 2
 	vim.opt.softtabstop = 2
 	vim.opt.shiftwidth = 2
 end)
 
 vim.keymap.set("n", "<leader>tw4", function()
-	print("Setting tab width to 4")
 	vim.opt.tabstop = 4
 	vim.opt.softtabstop = 4
 	vim.opt.shiftwidth = 4
 end)
+
+local opt = { buffer = bufnr, remap = false }
+vim.keymap.set("n", "gd", function()
+	vim.lsp.buf.definition()
+end, opt)
+vim.keymap.set("n", "K", function()
+	vim.lsp.buf.hover()
+end, opt)
+vim.keymap.set("n", "<leader>vws", function()
+	vim.lsp.buf.workspace_symbol()
+end, opt)
+vim.keymap.set("n", "<leader>vd", function()
+	vim.diagnostic.open_float()
+end, opt)
+vim.keymap.set("n", "[d", function()
+	vim.diagnostic.goto_prev()
+end, opt)
+vim.keymap.set("n", "]d", function()
+	vim.diagnostic.goto_next()
+end, opt)
+vim.keymap.set("n", "<leader>vca", function()
+	vim.lsp.buf.code_action()
+end, opt)
+vim.keymap.set("n", "<leader>vrr", function()
+	vim.lsp.buf.references()
+end, opt)
+vim.keymap.set("n", "<leader>vrn", function()
+	vim.lsp.buf.rename()
+end, opt)
+vim.keymap.set("n", "<C-h>", function()
+	vim.lsp.buf.signature_help()
+end, opt)
